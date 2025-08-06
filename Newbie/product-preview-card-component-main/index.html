@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <title>Frontend Mentor | Product preview card component</title>
 </head>
 <body>
   <div class="container">
     <article class="product-card">
       <picture class="product-image">
-        <source media="(max-width: 768px)" srcset="images/image-product-mobile.jpg">
         <source media="(min-width: 769px)" srcset="images/image-product-desktop.jpg">
-        <img src="images/image-product-desktop.jpg" alt="Product image" class="product-image">
+        <img src="images/image-product-mobile.jpg" alt="Product image" class="product-image">
       </picture>
       <div class="product-info">
         <header>
