@@ -1,0 +1,53 @@
+// main Sass file" 
+@use "./_variables.scss" as *;
+@use "./_base.scss" ;
+@use "./_reset.scss" ;
+
+body{
+    background-color: $background-color;
+}
+.testimonial {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    color: $text-color;
+}
+.testimonial__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.testimonial__image {
+    border-radius: 50%;
+}
+main{
+    display: grid;
+    grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+}
+
+.daniel{grid-area: daniel;background-color: $primary-color;}
+.jeanette{grid-area: jeanette;background-color: $text-color;color: $Grey-400;}
+.jonathan{grid-area: jonathan;background-color: $Grey-500;}
+.kira{grid-area: kira;background-color: $text-color;color: $Grey-400;}
+.patrick{grid-area: patrick;background-color: $Dark-blue;}
+
+@media (max-width: 1024px) {
+    main {
+        grid-template-areas:
+        "daniel"
+        "jonathan"
+        "jeanette"
+        "patrick"
+        "kira";
+        grid-template-columns: 1fr;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center;margin-top: 2rem; }
+.attribution a { color: hsl(228, 45%, 44%); }

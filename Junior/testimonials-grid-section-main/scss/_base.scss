@@ -1,0 +1,43 @@
+@use "./variables" as *;
+body {
+  font-family: $font-main;
+  font-size: 1rem;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 2rem;
+}
+
+h1 {
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  font-weight: 600;
+  margin: 1rem 0 2rem 0;
+}
+h2 {
+  font-size: clamp(1.5rem, 4vw, 1rem);
+}
+p {
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  line-height: 1.5;
+}
+
+a {
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+img {
+  border-radius: 4px;
+}
+
+input, textarea, select {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  border-radius: 4px;
+  outline: none;
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+  }
+}
