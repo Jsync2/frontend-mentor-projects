@@ -24,12 +24,11 @@ body{
 }
 .quote-bg{
     position: absolute;
-  top: 2rem; // adjust position
-  right: 5rem; // adjust position
-  width: 100px; // scale SVG
-  height: auto;
-  z-index: 0; // puts it behind text
-  opacity: 0.5; // make it a subtle background
+    top: 0.5rem; // adjust position
+    right: 5rem; // adjust position
+    width: 120px; // scale SVG
+    height: auto;
+    z-index: 0; // puts it behind text
 }
 .testimonial__header,
 .testimonial__text,
