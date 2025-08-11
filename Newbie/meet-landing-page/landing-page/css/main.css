@@ -53,31 +53,6 @@ p {
   color: #555;
 }
 
-/* Responsive Breakpoints */
-/* Tablets */
-@media (max-width: 1024px) {
-  .container {
-    width: 95%;
-  }
-}
-/* Mobile */
-@media (max-width: 768px) {
-  .flex {
-    flex-direction: column;
-  }
-  .grid-auto {
-    grid-template-columns: 1fr;
-  }
-}
-/* Small Phones */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-}
 body {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 500;
@@ -302,7 +277,7 @@ span {
 
 @media (max-width: 1023px) {
   footer {
-    background-image: url("/Newbie/meet-landing-page/landing-page/assets/tablet/image-footer.jpg");
+    background-image: url(../assets/tablet/image-footer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
