@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Make images and videos scale properly */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout Containers */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Typography (Fluid) */
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: #555;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+  .grid-auto {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}

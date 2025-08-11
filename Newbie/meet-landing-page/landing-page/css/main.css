@@ -1,0 +1,368 @@
+/* Color Variables */
+/* Typography */
+/* Spacing */
+/* Mixin */
+/* Shadows */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Make images and videos scale properly */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout Containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Typography (Fluid) */
+h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: #555;
+}
+
+/* Responsive Breakpoints */
+/* Tablets */
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+  .grid-auto {
+    grid-template-columns: 1fr;
+  }
+}
+/* Small Phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0 7rem 0;
+}
+
+.image-hero-tablet {
+  display: none;
+}
+
+.hero-title {
+  text-align: center;
+  padding: 0 6rem;
+}
+
+.image-collage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 5rem 0;
+}
+
+.footer-text {
+  display: flex;
+}
+
+.img-col {
+  width: calc(20% - 10px);
+  height: auto;
+  border-radius: 10px;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#content h2 {
+  padding-bottom: 2rem;
+}
+
+.scroll-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: hsl(240, 10%, 57%);
+  border: 1px solid hsl(240, 10%, 57%);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-weight: 900;
+  font-size: 0.7rem;
+}
+
+.line {
+  background: hsl(240, 18%, 85%);
+  width: 1px;
+  height: 5rem;
+  margin-top: 3rem;
+}
+
+.purp {
+  background-color: hsl(192, 37%, 48%);
+  padding: 0.8rem 1.5rem;
+  border-style: none;
+  border-radius: 25px;
+}
+
+.cya {
+  background-color: hsl(268, 34%, 53%);
+  padding: 0.8rem 2.5rem;
+  border-style: none;
+  border-radius: 25px;
+  margin: 1rem 0 0 0;
+}
+
+.btn {
+  padding: 2rem;
+}
+
+button {
+  font-weight: 900;
+  color: hsl(0, 0%, 98%);
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 110%;
+  letter-spacing: 0px;
+  padding: 2rem 0;
+}
+
+.text3 {
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: 4px;
+  font-weight: 900;
+  color: hsl(192, 37%, 48%);
+  text-transform: uppercase;
+  padding-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: hsl(240, 21%, 20%);
+}
+
+.text4 {
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 0px;
+  width: 35rem;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  aspect-ratio: 360/77;
+  margin-top: 20rem;
+  position: relative;
+  background-color: hsla(192, 37%, 48%, 0.9);
+}
+
+.footer-text {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  padding-top: 2rem;
+  gap: 200px;
+  margin-left: 7rem;
+}
+
+.footer-text h2 {
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0px;
+  color: hsl(0, 0%, 98%);
+  text-align: left;
+  margin-right: -10rem;
+  margin-left: 3rem;
+}
+
+.img-foot {
+  position: absolute;
+  z-index: -1;
+}
+
+.text-f {
+  flex-shrink: 2;
+  padding-left: 2rem;
+  color: hsl(0, 0%, 98%);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.scnd-line {
+  position: absolute;
+  top: -120px;
+}
+
+.scroll-two {
+  position: absolute;
+  background-color: hsl(0, 0%, 98%);
+  top: -10px;
+}
+
+.btn-footer {
+  background-color: hsl(268, 34%, 53%);
+  border-style: none;
+  border-radius: 25px;
+  padding: 0.8rem 2.8rem;
+  margin-right: 5rem;
+  text-wrap: nowrap;
+}
+
+span {
+  font-weight: 500;
+}
+
+.btn-footer:hover, .cya:hover {
+  background-color: hsl(268, 100%, 86%);
+  cursor: pointer;
+}
+
+.purp:hover {
+  background-color: hsl(192, 90%, 77%);
+  cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+  footer {
+    background-image: url("/Newbie/meet-landing-page/landing-page/assets/tablet/image-footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .footer-text {
+    background-color: hsla(192, 37%, 48%, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 6em 7em;
+    gap: 30px;
+    text-align: center;
+  }
+  .image-hero-left, .image-hero-right {
+    display: none;
+  }
+  .image-hero-tablet {
+    display: block;
+  }
+  .img-foot {
+    display: none;
+  }
+  .footer-text h2 {
+    margin: 0;
+  }
+  .btn-footer {
+    margin: 0;
+  }
+}
+@media (max-width: 480px) {
+  .img-col {
+    width: 40%;
+  }
+  footer {
+    background-position: center;
+  }
+  .image-collage {
+    padding-right: 5em;
+    padding-left: 5em;
+  }
+  .footer-text h2 {
+    text-align: center;
+    justify-content: center;
+  }
+  .btn-footer {
+    margin: 0;
+  }
+  .text-f {
+    padding: 0;
+  }
+  #hero {
+    padding: 3rem 0 2rem 0;
+  }
+  #content h2 {
+    padding: 0 2em;
+  }
+  .text4 {
+    padding: 1em 6em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

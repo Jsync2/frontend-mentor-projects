@@ -1,0 +1,31 @@
+/* Color Variables */
+$cyan-600: hsl(192,37%,48%);
+$cyan-300: hsl(192,90%,77%);
+$purple-600: hsl(268,34%,53%);
+$purple-300: hsl(268,100%,86%);
+$slate-900: hsl(240,21%,20%);
+$slate-600:hsl(240,10%,57%);
+$slate-300: hsl(240,18%,85%);
+$white: hsl(0,0%,98%);
+
+/* Typography */
+$font-family-base: 'Red Hat Display', sans-serif;
+$font-weight-regular: 500;
+$font-weight-bold: 900;
+$font-size-base: 16px;
+/* Spacing */
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 3rem;
+$spacing-xl: 4rem;
+
+/* Mixin */
+@mixin text-preset-1{font-size: 64px;line-height: 110%;letter-spacing: 0px;}
+@mixin text-preset-2{font-size: 40px;line-height: 110%;letter-spacing: 0px;}
+@mixin text-preset-3{font-size: 16px;line-height: 110%;letter-spacing: 4px;}
+@mixin text-preset-4{font-size: 18px;line-height: 110%;letter-spacing: 0px;}
+@mixin text-preset-5{font-size: 16px;line-height: 150%;letter-spacing: 0px;}
+
+/* Shadows */
+$box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);

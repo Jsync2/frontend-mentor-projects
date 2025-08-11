@@ -1,0 +1,208 @@
+@use "_variables" as *;
+@use "_reset-base.scss";
+
+
+body{
+    font-family: $font-family-base;
+    font-weight: $font-weight-regular;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0 7rem 0;
+}
+.image-hero-tablet{
+    display: none;
+}
+.hero-title{
+    text-align: center;
+    padding: 0 6rem;
+}
+.image-collage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 5rem 0;
+}
+.footer-text{
+    display: flex;
+}
+.img-col{
+    width: calc(20% - 10px);
+    height: auto;
+    border-radius: 10px;
+}
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#content h2{
+    padding-bottom: 2rem;
+}
+.scroll-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $slate-600;
+    border: 1px solid $slate-600;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-weight: $font-weight-bold;
+    font-size: 0.7rem;
+}
+.line{
+    background: $slate-300;
+    width: 1px;
+    height: 5rem;
+    margin-top: 3rem;
+}
+.purp{background-color: $cyan-600;padding: 0.8rem 1.5rem;border-style:none;border-radius: 25px;}
+.cya{background-color: $purple-600;padding: 0.8rem 2.5rem;border-style:none;border-radius: 25px;margin: 1rem 0 0 0 ;}
+.btn{padding: 2rem;}
+button{font-weight: $font-weight-bold;color: $white}
+h1{@include text-preset-1;padding: 2rem 0;}
+.text3{
+    @include text-preset-3;
+    font-weight: $font-weight-bold;
+    color: $cyan-600;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+h2{
+    @include text-preset-2;
+    text-align: center;
+    color: $slate-900;
+}
+.text4{
+    @include text-preset-4;
+    width: 35rem;
+    text-align: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    aspect-ratio: 360/77;
+    margin-top: 20rem;
+    position: relative;
+    background-color:hsla(192,37%,48%,0.9);
+}
+.footer-text{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    padding-top: 2rem;
+    gap: 200px;
+    margin-left: 7rem
+}
+.footer-text h2{
+    @include text-preset-2;
+    color: $white;
+    text-align: left;
+    margin-right: -10rem;
+    margin-left: 3rem;
+}
+.img-foot{
+    position: absolute;
+    z-index: -1;
+}
+.text-f{
+    flex-shrink: 2;
+    padding-left: 2rem;
+    color: $white;
+    font-weight: $font-weight-regular;
+    font-size: 16px;
+}
+.scnd-line{
+    position: absolute;
+    top: -120px;
+}
+.scroll-two{
+    position: absolute;
+    background-color: $white;
+    top: -10px;
+}
+.btn-footer{
+    background-color: $purple-600;
+    border-style: none;
+    border-radius: 25px;
+    padding: 0.8rem 2.8rem;
+    margin-right: 5rem;
+    text-wrap: nowrap;
+}
+span{
+    font-weight: $font-weight-regular;
+}
+.btn-footer:hover, .cya:hover{
+    background-color: $purple-300;
+    cursor: pointer;
+}
+.purp:hover{
+    background-color: $cyan-300;
+    cursor: pointer;
+}
+@media(max-width:1023px){
+    footer{
+        background-image: url("/Newbie/meet-landing-page/landing-page/assets/tablet/image-footer.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+    .footer-text{
+        background-color:hsla(192,37%,48%,0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 6em 7em;
+        gap: 30px;
+        text-align: center;
+    }
+    .image-hero-left, .image-hero-right{display: none;}
+    .image-hero-tablet{display: block;}
+    .img-foot{display: none;}
+    .footer-text h2{margin: 0;}
+    .btn-footer{margin: 0;}
+}
+@media (max-width: 480px) {
+    .img-col{
+        width: 40%;
+    }
+    footer{
+        background-position: center;
+    }
+    .image-collage{
+        padding-right: 5em;
+        padding-left:  5em;
+    }
+    .footer-text h2{text-align: center;justify-content: center}
+    .btn-footer{margin: 0;}
+    .text-f{padding: 0;}
+    #hero{
+        padding: 3rem 0 2rem 0;
+    }
+    #content h2{padding: 0 2em;}
+    .text4{padding: 1em 6em;}
+}
