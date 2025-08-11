@@ -44,32 +44,3 @@ p {
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   color: #555;
 }
-
-/* Responsive Breakpoints */
-
-/* Tablets */
-@media (max-width: 1024px) {
-  .container {
-    width: 95%;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .flex {
-    flex-direction: column;
-  }
-  .grid-auto {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Small Phones */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-}
