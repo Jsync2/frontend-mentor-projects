@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    
+    <style>
+    main{padding: 8.5rem 1.5rem 0 1.5rem;font-family: 'Roboto';}
+    .sub-icon{width: 4rem;}
+    .sub-section{padding-bottom: 50%;}
+    .sub-btn{color: white;background-color: hsl(234, 29%, 20%);font-weight: 700;border-style: none;cursor:pointer;}
+    @media(min-width: 600px){.sub-section{padding-bottom: 40px;}main{padding: 5rem;text-align: center;}}
+    @media(min-width: 1024px){main{display: flex;justify-content: center;align-items: center;flex-direction: column;padding: 1rem;width: 35rem;}
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <img src="./assets/images/icon-list.svg" class="sub-icon">
+        </header>
+        <section class="sub-section">
+            <h1>Thanks for Subscribing!</h1>
+            <p>A confirmation has been sent to <span id="userEmail" ></span>. 
+                Please open it and click the button inside to confirm your subscription</p>
+        </section>
+        <a href="./index.html">
+            <button type="button" class="sub-btn">Dismiss Message</button>
+        </a>    
+    </main>
+    <script>
+    const display = document.getElementById('userEmail');
+    const username = localStorage.getItem('email');
+    display.textContent = `${username}`;
+    </script>
+</body>
+</html>

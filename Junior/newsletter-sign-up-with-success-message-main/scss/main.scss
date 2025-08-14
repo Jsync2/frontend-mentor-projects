@@ -1,0 +1,109 @@
+@use 'variables' as *;
+@use 'resetnbase';
+
+body{
+    display: flex;
+    margin: 0;
+    background-color: $Blue-700;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+main{
+    font-family: $font-main;
+    font-size: $font-size-base;
+    color: $Blue-800;
+    background-color: white;
+}
+img{
+    width: 100%;
+}
+section{
+    padding: 0 1.5rem;
+}
+h1{
+    font-size: clamp(2.5rem, 4vw, 4rem);
+}
+p,li{
+    font-size: clamp(1rem, 2vw, 1.3rem);
+}
+.news-list {
+  list-style: none;
+  padding-left: 0;
+}
+.news-list li {
+  position: relative;
+  padding-left: 2.5em; /* space for icon */
+}
+.news-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1em;   /* scales with font size */
+  height: 1em;
+  transform: translateY(-50%);
+  background: url("../assets/images/icon-list.svg") no-repeat center / contain;
+}
+label{
+    font-size: 0.8rem;
+    font-weight: $weight-bold;
+}
+#error{
+    color: white;
+    padding-left: 7rem;
+}
+button{
+    color: white;
+    background-color: $Blue-800;
+    font-weight: $weight-bold;
+    border-style: none;
+    cursor:pointer;
+}
+button:hover{
+    background: linear-gradient(to right, rgb(255, 84, 118), $primary-color);
+    box-shadow: 5px 15px 15px(rgba(255, 84, 118,0.6));
+    border-style: none;
+}
+#cta-form input, button{
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid $Grey;
+}
+
+@media(min-width:600px){
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 20px;
+        max-width: 600px;
+    }
+    #error{padding-left: 15rem;}
+};
+@media(min-width:1024px){
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        max-width: 1024px;
+        margin: 5rem;
+    }
+    section{
+        flex-shrink: 50;
+        padding: 0 5rem;
+    }
+    #error{padding-left: 13rem;
+}
+};
+#userEmail{
+    font-weight: bold;
+}
+.attribution { font-size: 11px; text-align: center; color: white;}
+.attribution a { color: green; }

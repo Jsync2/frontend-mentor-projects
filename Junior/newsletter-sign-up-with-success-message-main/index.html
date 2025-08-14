@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="./js/script.js" defer></script>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <main>
+    <header>
+      <picture>
+        <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1024px)"><!-- For large screens -->
+        <source srcset="./assets/images/illustration-sign-up-tablet.svg" media="(min-width: 600px)"><!-- For medium screens -->     
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="banner"><!-- Default / small screens -->
+      </picture>
+    </header>
+    <section>
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="news-list">
+        <li>Product discovery and building what matters</li>
+        <li>Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+    </ul>
+    <form action="#" id="cta-form" novalidate>
+      <label for="email">Email address</label>
+      <label for="email" id="error">Valid email required</label><br>
+      <input type="email" id="email" name="uEmail" placeholder="email@company.com">
+      <button type="submit">Subscribe to monthly newsletter</button>
+    </form>
+    </section>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Justine Liban</a>.
+  </footer>
+</body>
+</html>
