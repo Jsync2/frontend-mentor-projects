@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    /*Primary Colors*/
+    --Purple-600: hsl(246, 80%, 60%);
+    --Orange-300: hsl(15, 100%, 70%);
+    --Blue-300: hsl(195, 74%, 62%);
+    --Pink-400: hsl(348, 100%, 68%);
+    --Green-400: hsl(145, 58%, 55%);
+    --Purple-700: hsl(264, 64%, 52%);
+    --Yellow-300: hsl(43, 84%, 65%);
+
+    /*Neutral Colors*/
+    --Navy-950: hsl(226, 43%, 10%);
+    --Navy-900: hsl(235, 46%, 20%);
+    --Purple-500: hsl(235, 45%, 61%);
+    --Navy-200: hsl(236, 100%, 87%);
+
+    /*Typhography*/
+    --family-base: 'Rubik', sans-serif;
+    --size-title: 18px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Navy-950);
+    font-family: var(--family-base);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    color: var(--Navy-200);
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+#avatar{
+    width: 5em;
+    border: 3px solid white;
+    border-radius: 100%;
+}
+.work{background-color: var(--Orange-300);grid-area: work;}
+.play{background-color: var(--Blue-300);grid-area: play;}
+.study{background-color: var(--Pink-400);grid-area: study;}
+.exercise{background-color: var(--Green-400);grid-area: exercise;}
+.social{background-color: var(--Purple-700);grid-area: social;}
+.self-care{background-color: var(--Yellow-300);grid-area: self-care;}
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 20px;
+}
+.card-content{
+    background-color: var(--Navy-900);
+    border-radius: 20px;
+    padding: 18px 25px 18px 25px;
+    position: relative;
+    cursor: pointer;
+}
+.card-content:hover{
+    background-color: var(--Purple-500);
+}
+.icon{
+    position: absolute;
+    right: 5%;
+}
+.dot{
+    position: absolute;
+    left: 90%;
+    top: 30%;
+    cursor: pointer;
+}
+.card-bg{
+    padding-right: 0.5rem;
+    border-radius: 20px 20px 0 0;
+    height: 6vh;
+}
+.user{
+    background-color: var(--Purple-600);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 1rem 3rem 1rem;
+    border-radius: 20px;
+}
+h1, p, h2{
+    margin: 0;
+    font-weight: 300;
+    color: aliceblue;
+}
+h3{
+    font-weight: 500;
+    color: white;
+}
+.profile{
+    background-color: var(--Navy-900);
+    grid-area: profile;
+}
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 2.5rem;
+    
+}
+#daily, #weekly, #monthly{
+    border-style: none;
+    color: var(--Navy-200);
+    background-color: var(--Navy-900);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+#daily:hover, #weekly:hover,#monthly:hover{color: white;}
+#daily:focus, #weekly:focus, #monthly:focus{color: white;}
+.data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.data h2{
+    font-size: clamp(2rem, 3vw, 3rem);
+    padding: 0.5rem 0;
+}
+.data p{
+    color: var(--Navy-200);
+    font-size: clamp(1rem, 3vw, 1.1rem);
+}
+.dot:hover{filter: brightness(100);}
+
+.attribution { font-size: 11px; text-align: center; margin-top: 2rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 1024px){
+    body{
+        padding: 0 5rem;
+    }
+    main{
+        display: grid;
+       grid-template-columns: repeat(4,1fr);
+       grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+        'profile work play study'
+        'profile exercise social self-care';
+    }
+    .user, .data, .time{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+    .user{padding: 2rem;}
+    .time button{padding: 0.5rem;}.title{font-size: 1.2rem;padding-bottom: 1rem;}
+    .data h2{font-size: 3rem;}.data p{font-size: 1rem;padding-bottom: 2rem;}
+    .name p{font-size: 0.9rem;padding-top: 1rem;color: var(--Navy-200);}.name {padding: 3rem 0;}
+    .dot{left: 80%;top: 20%;}#avatar{width: 3em;border: 3px solid white;border-radius: 100%;}
+}
