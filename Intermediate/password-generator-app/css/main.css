@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root{
+    /*Theme Colors*/
+    --Grey-950: hsl(255, 22%, 4%);
+    --Grey-900: hsl(248, 17%, 9%);
+    --Grey-850: hsl(248, 14%, 11%);
+    --Grey-800: hsl(248, 10%, 15%);
+    --Grey-700: hsl(248, 5%, 34%);
+    --Grey-600: hsl(251, 9%, 53%);
+    --Grey-200: hsl(252, 11%, 91%);
+    /*Active Colors*/
+    --Green-200: hsl(127, 100%, 82%);
+    --Yellow-300: hsl(42, 91%, 68%);
+    --Orange-400: hsl(13, 95%, 66%);
+    --Red-500: hsl(0, 91%, 63%);
+    /*Gradient*/
+    --Gradient-1: linear-gradient(hsl(248, 17%, 9%),hsl(255, 22%, 4%,91%));
+}
+body{
+    background: var(--Gradient-1);
+    color: white;
+    font-family: 'JetBrains Mono', sans-serif;
+    line-height: 2;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+h1{font-size: 1rem;font-weight: 400;color: var(--Grey-600);}
+#passInput{
+    padding: 1rem;
+    border-style: none;
+    font-size: 1.5rem;
+    background-color: var(--Grey-800);
+    width: 100%;
+    color: var(--Grey-600);
+}
+.input{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+.input #copy{position: absolute; right: 1rem; top: 1rem;cursor: pointer;}
+.indicator, .charLength{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkbox{
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Grey-800);
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+}
+.charLength #result{
+    color: var(--Green-200);
+    font-size: 1.5rem;
+}
+input[type="range"] {
+    appearance: none;
+    height: 8px;
+    background: var(--Grey-850);
+}
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb:active{
+    background: var(--Grey-900);
+    border: 2px solid var(--Green-200) ;
+}
+input[type="checkbox"]{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: var(--Grey-850);
+    border: 2px solid white;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked{
+    background: url(../assets/images/icon-check.svg)no-repeat var(--Green-200) center;
+    border: none;
+}
+.indicator{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--Grey-850);
+    color: var(--Grey-600);
+    font-weight: 700;
+}
+#generate{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    background: var(--Green-200);
+    border-style: none;
+    cursor: pointer;
+}
+#generate:focus{
+    background-color: var(--Grey-800);
+    color: var(--Green-200);
+    border: 1px solid var(--Green-200);
+}
+#generate svg{
+    margin-left: 1.2rem;
+}
+.input svg{
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    cursor: pointer;
+}
+.bar{
+    border: 2px solid white;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+}
+#ind-name{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 0.2rem;
+}
+.bar1{background-color: var(--Red-500);border: 2px solid var(--Red-500);}
+.bar2{background-color: var(--Orange-400);border: 2px solid var(--Orange-400);}
+.bar3{background-color: var(--Yellow-300);border: 2px solid var(--Yellow-300);}
+.bar4{background-color: var(--Green-200);border: 2px solid var(--Green-200);}
