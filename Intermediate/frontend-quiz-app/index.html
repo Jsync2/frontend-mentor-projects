@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Frontend quiz app</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div id="topic">
+      <img src="" id="icon">
+      <span></span>
+    </div>
+    <label class="switch">
+      <img alt="light" id="light">
+      <input type="checkbox" id="theme-toggle" aria-label="Toggle dark Mode">
+      <span class="slider"></span>
+      <img  alt="dark" id="dark">
+    </label>
+  </header>
+  <main>
+    <!--Start Menu-->
+    <section id="start-menu">
+      <div class="title">
+        <span>Welcome to the<br></span>
+        <h1>Frontend Quiz!<br></h1>
+        <small>Pick a subject to get started.</small>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><button role="tab" onclick="quizHtml()"><img src="./assets/images/icon-html.svg" alt="html" class="html">HTML</button></li>
+            <li><button role="tab" onclick="quizCss()"><img src="./assets/images/icon-css.svg" alt="css" class="css">CSS</button></li>
+            <li><button role="tab" onclick="quizJs()"><img src="./assets/images/icon-js.svg" alt="js" class="js">JavaScript</button></li>
+            <li><button role="tab" onclick="quizAccess()"><img src="./assets/images/icon-accessibility.svg" alt="access" class="access">Accessibility</button></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!--Questions-->
+    <section id="question">
+      <div class="question-container">
+        <div id="question-number"><small></small>
+          <p id="questionaire"></p>
+        </div>
+        <div id="progress">
+          <div id="progress-bar"></div>
+        </div>
+      </div>
+      <div class="choices">
+        <label class="radio-label">
+          <input type="radio" name="choice" value="0" />
+          <div class="custom-radio">
+            <div class="letter">A</div>
+            <span class="opt-text">12345</span>
+            <img src="" class="mark">
+          </div>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="choice" value="1" />
+          <div class="custom-radio">
+            <div class="letter">B</div>
+            <span class="opt-text">12345</span>
+            <img src="" class="mark">
+          </div>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="choice" value="2" />
+          <div class="custom-radio">
+            <div class="letter">C</div>
+            <span class="opt-text">12345</span>
+            <img src="" class="mark">
+          </div>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="choice" value="3" />
+          <div class="custom-radio">
+            <div class="letter">D</div>
+            <span class="opt-text">12345</span>
+            <img src="" class="mark">
+          </div>
+        </label>
+        <button id="submit">Submit Answer</button>
+        <div id="no-ans">
+          <img src="./assets/images/icon-error.svg" alt="err"><span>Please select an answer</span>
+        </div>
+      </div>
+    </section>
+    <!--Score-->
+    <section id="scoring">
+      <div class="title">
+        <span>Quiz completed<br></span>
+        <h1>You scored...<br></h1>
+      </div>
+      <div class="result">
+        <div id="topic-result">
+          <div>
+            <img src="" id="icon-result">
+            <span></span>
+          </div>
+        <h2 id="score"></h2>
+        <small>Out of 10</small>
+      </div>
+      <button type="button" id="playAgain" onclick="playAgain()">Play Again</button>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+</html>

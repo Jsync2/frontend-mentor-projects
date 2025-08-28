@@ -1,0 +1,304 @@
+:root {
+  --grey-500: #626C7F;
+  --grey-50:  #F4F6FA;
+  --blue-950: #0B192C;
+  --blue-900: #313E51;
+  --blue-800: #334155;
+  --blue-850: #3B4D66;
+  --blue-500: #2563FF;
+  --blue-100: #E2E8F0;
+  --blue-50:  #EFF6FF;
+  --green: #10B981;
+  --green-100: #D1FAE5;
+  --purple-600: #8B27F5;
+  --purple-100: #F3E8FF;
+  --orange-600: #F97316;
+  --orange-10:  #FFEDD5;
+  --red-600: #E25444;
+  /*Mobile Text Preset*/
+  --text-preset-1M-medium: 500 5.5rem/100% "Myfont", sans-serif;
+  --text-preset-2M-medium: 500 2.5rem/100% "Myfont", sans-serif;
+  --text-preset-2M-light: 300 2.5rem/100% "Myfont", sans-serif;
+  --text-preset-3M-medium: 500 1.25rem/120% "Myfont", sans-serif;
+  --text-preset-4M-medium: 500 1.12rem/100% "Myfont", sans-serif;
+  --text-preset-5M-italic: italic 0.9rem/150% "Myfont", sans-serif;
+  /*Normal text preset*/
+  --text-preset-1-medium: 500 9rem/100% "Myfont", sans-serif;
+  --text-preset-2-medium: 500 4rem/100% "Myfont", sans-serif;
+  --text-preset-2-light: 300 4rem/100% "Myfont", sans-serif;
+  --text-preset-3-medium: 500 2.25rem/120% "Myfont", sans-serif;
+  --text-preset-4-medium: 500 1.75rem/100% "Myfont", sans-serif;
+  --text-preset-5-medium: 500 1.5rem/150% "Myfont", sans-serif;
+  --text-preset-5-regular: 400 1.5rem/150% "Myfont", sans-serif;
+  --text-preset-6-italic: italic 1.25rem/150% "Myfont", sans-serif;
+}
+@font-face {
+  font-family: "Myfont";
+  src: url("../assets/fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+}
+body{
+    padding: 1rem;
+    font-family: "Myfont", sans-serif;
+}
+header{
+    display: flex;
+    justify-content: flex-end
+}
+.switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.darkMode .title,
+.darkMode #topic span,
+.darkMode small, 
+.darkMode ul li button,
+.darkMode #questionaire,
+.darkMode .title span{color: white;}
+.darkMode ul li button{background-color: var(--blue-850);}
+.darkMode ul li button:hover{background-color: var(--grey-500);}
+.darkMode .custom-radio, .darkMode #topic-result{background-color: var(--blue-850);color: white;}
+
+.title{color: var(--blue-900);margin-top: 2rem;}
+.title h1{font: var(--text-preset-2M-medium);margin: 0 0 1rem 0;}
+.title span{font: var(--text-preset-2M-light);}
+.title small{font: var(--text-preset-5M-italic);color: var(--grey);}
+.menu{margin-top: 3rem;}
+.menu nav ul{display: flex;margin: 0;padding: 0;flex-direction: column;gap: 1rem;}
+ul li{list-style: none;}
+ul li button{
+    width: 100%;
+    padding: 0.5rem; 
+    text-align: left; 
+    display: flex; 
+    align-items: center;
+    gap: 1rem; 
+    font: var(--text-preset-4M-medium);
+    background-color: white;
+    color: var(--blue-900);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+ul li button:hover{
+    background-color: var(--purple-100);
+    box-shadow: 0 4px #666;
+    transition: ease-in;
+}
+ul li button:active{
+    transform: translateY(4px);
+    box-shadow: 0 2px #666;
+}
+ul li button img{padding: 0.5rem; width: 45px;}
+.html{background-color: var(--orange-10);border-radius: 10px;}
+.css{background-color: var(--green-100);border-radius: 10px;}
+.js{background-color: var(--blue-50);border-radius: 10px;}
+.access{background-color: var(--purple-100);border-radius: 10px;}
+.switch input{
+    display: none;
+}
+.slider {
+  position: relative;
+  width: 35px;
+  height: 20px;
+  background: var(--purple-600);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+input:checked + .slider::before {
+  transform: translateX(15px);
+}
+
+/*QUESTIONAIRE STYLE*/
+
+.choices{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.radio-label {
+    display: flex;
+    cursor: pointer;
+}
+.radio-label input{
+    display: none ;
+}
+.custom-radio {
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 0.6rem 0.9rem;
+    gap: 2rem;
+    font: var(--text-preset-3M-medium);
+    color: var(--blue-900);
+}
+.letter{
+    color: var(--grey-500);
+    background-color: var(--grey-50);
+    border-radius: 8px;
+    padding: 0.8rem 0.9rem;
+}
+.radio-label input:checked + .custom-radio{
+    border: 2px solid var(--purple-600);
+}
+.radio-label input:checked + .custom-radio .letter{
+    background: var(--purple-600);
+    color: white;
+}
+#submit, #playAgain{
+    font: var(--text-preset-4M-medium);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--purple-600);
+    color: white;
+    border-style: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+#no-ans{
+    display: flex; 
+    padding: 1rem;
+    justify-content: center; 
+    align-items: center; gap: 1rem; 
+    font-size: 1.2rem;
+    color: var(--red-600);
+}
+#no-ans{display: none;}
+#questionaire{font: var(--text-preset-3M-medium);color: var(--blue-900);}
+#question-number{font: var(--text-preset-5M-italic);margin-top: 3rem;}
+#progress {
+  width: 100%;
+  background-color: white;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+}
+#progress-bar{
+  width: 0%;
+  height: 20px;
+  background-color: var(--purple-600);
+  border-radius: 10px;
+  transition: width 0.7s ease;
+}
+#topic{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font: var(--text-preset-4M-medium);
+    color: var(--blue-900);
+}
+#topic img{padding: 0.5rem;background-color: var(--purple-100);margin-right: 0.5rem; border-radius: 10px; width: 3rem;}
+
+.correct{
+    border: 2px solid var(--green) !important;
+}
+.correct .letter{
+    background-color: var(--green) !important;
+    color: white;
+}
+.correct .mark{
+    content: url("../assets/images/icon-correct.svg");
+}
+
+.wrong{
+    border: 2px solid var(--red-600) !important;
+}
+.wrong .letter{
+    background-color: var(--red-600) !important;
+    color: white;
+}
+.wrong .mark{
+    content: url("../assets/images/icon-error.svg");
+}
+/* RESULT STYLE*/
+
+.result{
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    font: var(--text-preset-4M-medium);
+    color: var(--blue-900);
+}
+#score{font: var(--text-preset-1M-medium); margin: 1rem;}
+#topic-result{
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    gap: 1rem;
+}
+#topic-result > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+#topic-result img{
+    width: 2.5rem;
+    padding: 0.1rem;
+    border-radius: 5px;
+    background-color: var(--purple-100);
+}
+
+@media (min-width:768px){
+    body{
+        padding: 2rem 5rem;
+    }
+    .title span{font: var(--text-preset-2-light);}
+    .title h1{font: var(--text-preset-2-medium);}
+    .title small{font:  var(--text-preset-6-italic);}
+    ul li button{font: var(--text-preset-4-medium);padding: 1rem;}
+    .menu nav ul{gap: 1.5rem;}
+    #questionaire, .custom-radio{font: var(--text-preset-4-medium);}
+    #question-number{font: var(--text-preset-6-italic); color: var(--grey-500);}
+}
+@media (min-width:1024px){
+    #start-menu, #question, #scoring{
+        display: flex;
+        gap: 5rem;
+        margin-top: 5rem;
+    }
+    .menu, .choices, .result{width: 100%;flex: 1;}
+    .title, .question-container{flex: 1;}
+    .question-container{display: flex; flex-direction: column;justify-content: space-between;}
+    #questionaire{font: var(--text-preset-3-medium);}
+    #question-number{font: var(--text-preset-6-italic);margin: 0;}
+    .custom-radio{padding: 1.5rem;}
+    .letter, .opt-text{font: var(--text-preset-4-medium);}
+    #topic span{font: var(--text-preset-4-medium);}
+    #topic img{padding: 0.5rem;background-color: var(--purple-100);margin-right: 1rem; border-radius: 10px;}
+}
+#start-menu{
+    
+}
+#question{
+    display: none;
+}
+#scoring{
+    display: none;
+}
