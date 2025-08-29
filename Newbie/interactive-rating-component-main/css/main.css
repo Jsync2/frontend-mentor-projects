@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --Orange-500: hsl(25, 97%, 53%);
+
+    --White: hsl(0, 100%, 100%);
+    --Grey-500: hsl(217, 12%, 63%);
+    --Grey-900: hsl(213, 19%, 18%);
+    --Grey-950: hsl(216, 12%, 8%);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 1.2rem;
+    background-color: var(--Grey-950);
+    font: 400 15px 'Overpass', sans-serif;
+    color: hsl(216, 17%, 89%);
+}
+section{
+    border-radius: 10px;
+    background-color: var(--Grey-900);
+    padding: 1.2rem;
+    max-width: 400px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline-start: 0;
+    list-style: none;
+}
+ul li{
+    cursor: pointer;
+    border-radius: 100%;
+    padding: 0.7rem 1rem;
+    background-color: hsl(215, 14%, 32%);
+    font-weight: 700;
+}
+ul li:hover{
+    background-color: var(--Orange-500);
+    transition: 0.5s ease;
+}
+ul li:focus{
+    background-color: var(--White);
+    color: var(--Grey-900);
+}
+#submit{
+    color: var(--Grey-950);
+    background-color: var(--Orange-500);
+    font-weight: 700;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-radius: 50px;
+    border-style: none;
+    width: 100%;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: white;
+    transition: 0.5s ease-in-out;
+}
+#submit:disabled:hover {
+    background-color: var(--Orange-500);
+    cursor: not-allowed;
+}
+#ratingState img{
+    border-radius: 100%;
+    padding: 0.9rem;
+    background-color: hsl(215, 14%, 32%);
+}
+#ratingState h1{
+    color: var(--White);
+    font-size: 1.5rem;
+}
+#ratingState p{
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+#thankyouState{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+#thankyouState img{
+    margin-top: 1rem;
+}
+#thankyouState span{
+    color: var(--Orange-500);
+    background-color: hsl(214, 13%, 31%);
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+}
+#thankyouState h1{
+    color: white;
+    font-weight: 700;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
