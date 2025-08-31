@@ -1,0 +1,96 @@
+:root{
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+}
+@font-face {
+    font-family: 'myFont';
+    src: url(../assets/fonts/WorkSans-VariableFont_wght.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--Purple-950);
+    font-family: 'myFont', sans-serif;
+    background: url(../assets/images/background-pattern-mobile.svg) no-repeat center top / contain  var(--Purple-100);
+    padding: 2rem 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--White);
+    padding: 1.5rem;
+    margin: 5rem 0.5rem;
+    border-radius: 8px;
+    max-width: 515px;
+    gap: 1rem;
+}
+header{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+header img{
+    width: 1.3rem;
+}
+header h1{ margin: 0; font-weight:bolder; font-size: clamp(2rem, 5vw, 3rem);}
+.faq-item{
+    display: flex;
+    flex-direction: column;
+}
+hr{
+    border-top: 1px solid var(--Purple-100);
+    margin: 1rem 0;
+}
+.faq-item input{
+    display: none;
+}
+.faq-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    gap: 2rem;
+}
+.faq-content{
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    font-size: 0.9rem;
+    color: var(--Purple-600);
+}
+.faq-label img.icon-plus{
+    cursor: pointer;
+    display: inline;
+}
+.faq-label img.icon-minus{
+    display: none;
+    cursor: pointer;
+}
+.faq-item input:checked ~ .faq-content{
+    max-height: 200px;
+}
+.faq-item input:checked + .faq-label img.icon-plus{
+    display: none;
+}
+.faq-item input:checked + .faq-label img.icon-minus{
+    display: inline;
+}
+
+@media (min-width: 565px){
+    body{
+        background: url(../assets/images/background-pattern-desktop.svg) no-repeat center top / contain var(--Purple-100);
+    }
+    main{
+        border-radius: 16px;
+    }
+}
+footer { font-size: 11px; text-align: center; }
+footer a { color: hsl(228, 45%, 44%); }
