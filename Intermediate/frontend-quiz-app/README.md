@@ -43,8 +43,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Jsync2/frontend-mentor-projects/edit/main/Intermediate/frontend-quiz-app)
+- Live Site URL: [Add live site URL here](https://quizappchallenge.netlify.app/)
 
 ## My process
 
