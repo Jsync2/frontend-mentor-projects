@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-nav">
+      <div id="overlay"></div>
+      <button type ="button" aria-modal="flase" onclick="openMenu()"><img src="./images/icon-menu.svg" alt="hamburgermenu" id="hamburger"></button>
+      <img src="./images/logo.svg" alt="sneakers-logo" id="logo">
+      <nav>
+        <ul id="menu" aria-expanded="true">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>    
+        </ul>
+        <button type="button" id="close" onclick="closeMenu()"><img src="./images/icon-close.svg" alt="close menu"></button>
+      </nav>
+    </div>
+    <div class="header-action">
+      <button aria-label="Cart" ><img src="./images/icon-cart.svg" id="cart"></button>
+      <img src="./images/image-avatar.png" alt="avatar" id="avatar">
+    </div>
+  </header>
+  <hr class="divider">
+  <main>
+    <div class="cart-container" id="cart-container">
+      <div class="cart-header">
+        <h4 style="margin: 0;">Cart</h4>
+      </div>
+      <hr class="cart-divider">
+      <span id="empty">Your cart is empty.</span>
+      <div class="cart-item" id="cart-items">
+        <div class="cart-item-preview">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="sneaker preview">
+          <div class="cart-item-info">
+            <h5>Fall Limited Edition Sneakers</h5>
+            <p>$125.00 x 3 <span>$375.00</span></p>
+          </div>
+          <button type="button">
+            <img src="./images/icon-delete.svg" alt="delete" id="delete">
+          </button>
+        </div>
+        <button type="button" class="checkout">Checkout</button>
+      </div>
+    </div>
+    <article>
+      <div class="product-slideshow" id="lightbox">
+        <button class="prev" aria-label="Previous image" onclick="nextImage(-1)"><img src="./images/icon-previous.svg"></button>
+        <button class="next" aria-label="Next image" onclick="nextImage(1)"><img src="./images/icon-next.svg"></button>
+        <figure class="mySlide">
+          <img src="./images/image-product-1.jpg" alt="sneaker preview">
+        </figure>
+        <figure class="mySlide">
+          <img src="./images/image-product-2.jpg" alt="sneaker preview2">
+        </figure>
+        <figure class="mySlide">
+          <img src="./images/image-product-3.jpg" alt="sneaker front view">
+        </figure>
+        <figure class="mySlide">
+          <img src="./images/image-product-4.jpg" alt="sneaker side view">
+        </figure>
+        <div class="thumbnail-container" role="tablist" aria-label="Product thumbnails">
+          <button class="thumbnail" role="tab" aria-label="View product image 1" onclick="currentSlide(1)" onkeydown="handleKeyPress(event, 1)">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="" aria-hidden="true">
+          </button>
+          <button class="thumbnail" role="tab" aria-label="View product image 2" onclick="currentSlide(2)" onkeydown="handleKeyPress(event, 2)">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="" aria-hidden="true">
+          </button>
+          <button class="thumbnail" role="tab" aria-label="View product image 3" onclick="currentSlide(3)" onkeydown="handleKeyPress(event, 3)">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="" aria-hidden="true">
+          </button>
+          <button class="thumbnail" role="tab" aria-label="View product image 4" onclick="currentSlide(4)" onkeydown="handleKeyPress(event, 4)">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="" aria-hidden="true">
+          </button>
+        </div>
+        <!-- Lightbox Overlay-->
+        <div id="lightboxOverlay" class="lightbox-overlay">
+          <div class="lightbox-content">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <div id="overlay-slideshow"></div>
+          </div>
+        </div>
+
+      </div>
+      <section class="description" aria-label="description">
+        <h5>SNEAKER COMPANY</h5>
+        <h1>Fall Limited Edition<br>Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="price">
+          <span>$125.00
+            <span>50%</span>
+          </span>
+          <span>$250.00</span>
+        </div>
+         <form class="purchase">
+          <div class="quantity-input">
+            <button type="button" aria-label="Decrease quantity" id="decrease" onclick="removeQuantity()"><img src="./images/icon-minus.svg" alt="minus-icon"></button>
+            <input id="quantity" type="number" value="0" min="0" />
+            <button type="button" aria-label="Increase quantity" id="increase" onclick="addQuantity()"><img src="./images/icon-plus.svg" alt="plus-icon"></button>
+          </div>
+          <button type="button" class="add-to-cart" id="addToCart">
+            <img src="./images/icon-cart.svg" alt="cart-icon">Add to cart
+          </button>
+        </form>
+      </section>
+    </article>
+  </main>
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Justine Liban</a>.
+  </footer>
+</body>
+</html>
