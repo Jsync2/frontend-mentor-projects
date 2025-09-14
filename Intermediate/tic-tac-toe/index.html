@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Frontend Mentor | Tic Tac Toe</title>
+  <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <main>
+    <!-- Game Menu -->
+    <section id="game-mode">
+      <img src="./assets/logo.svg" alt="logo">
+      <div class="mark">
+        <p>PICK PLAYER 1'S MARK</p>
+        <div class="mark-icons">
+          <button type="button" id="default" autofocus><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 64 64"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z"/></svg></button>
+          <button type="button"><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 64 64"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z"/></svg></button>
+        </div>
+        <p>REMEMBER: X GOES FIRST</p>
+      </div>
+      <button id="pva" class="new-game" type="button">NEW GAME (VS CPU)</button>
+      <button id="pvp" class="new-game" type="button">NEW GAME (VS PLAYER)</button>
+    </section>
+    <!-- Game board start -->
+    <section id="game-board">
+      <div class="top-menu">
+        <img src="./assets/logo.svg" alt="logo">
+        <div class="turn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 64 64"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" fill="#A8BFC9"/></svg>
+          <p>TURN</p>
+        </div>
+        <button><img src="./assets/icon-restart.svg" alt=""></button>
+      </div>
+      <div class="board" id="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      <div class="score">
+        <div><p>X (YOU)</p><strong>0</strong></div>
+        <div><p>TIES</p><strong>0</strong></div>
+        <div><p>O (CPU)</p><strong>0</strong></div>
+      </div>
+    </section>
+    <!-- Game Result -->
+     <section id="result-popup">
+      <p>YOU WON!</p>
+      <div class="result-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="icon"></svg>
+        <h2>TAKES THE ROUND</h2>
+      </div>
+      <div>
+        <button>QUIT</button>
+        <button>NEXT ROUND</button>
+      </div>
+     </section>
+     <div class="overlay"></div>
+  </main>
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Justine Liban</a>.
+  </footer>
+</body>
+</html>
