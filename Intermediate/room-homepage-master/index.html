@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Room homepage</title>
+  <link rel="stylesheet" href="./style/main.css">
+  <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="header-nav">
+      <button class="header-menu" aria-label="Menu toggle" onclick="openNav()">
+        <img src="./images/icon-hamburger.svg" alt="hamburger menu">
+      </button>
+      <ul class="nav-list">
+        <li><a href="#">home</a></li>
+        <li><a href="#">shop</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+      <button class="nav-close" aria-label="Close">
+        <img src="./images/icon-close.svg" alt="close nav" onclick="closeNav()">
+      </button>
+    </nav>
+    <img src="./images/logo.svg" alt="logo" class="header-logo">
+  </header>
+  <div class="overlay"></div>
+  <main>
+    <section class="hero">
+      <div class="hero-slideshow">
+        <picture class="hero-image fade">
+          <source media="(min-width: 769px)" srcset="./images/desktop-image-hero-1.jpg">
+          <img src="./images/mobile-image-hero-1.jpg" alt="hero">
+        </picture>
+        <picture class="hero-image fade">
+          <source media="(min-width: 769px)" srcset="./images/desktop-image-hero-2.jpg">
+          <img src="./images/mobile-image-hero-2.jpg" alt="hero">
+        </picture>
+        <picture class="hero-image fade">
+          <source media="(min-width: 769px)" srcset="./images/desktop-image-hero-3.jpg">
+          <img src="./images/mobile-image-hero-3.jpg" alt="hero">
+        </picture>
+        <div class="arrow-nav">
+          <button class="prev"><img src="./images/icon-angle-left.svg" alt="previous" onclick="mySlides(-1)"></button>
+          <button class="next"><img src="./images/icon-angle-right.svg" alt="next" onclick="mySlides(1)"></button>
+        </div>
+      </div>
+      <article class="hero-content">
+        <h1>Discover innovative ways to decorate</h1>
+        <p>We provide unmatched quality, comfort, and style for property owners across the country. 
+          Our experts combine form and function in bringing your vision to life. Create a room in your 
+          own style with our collection and make your property a reflection of you and what you love.</p>
+        <a href="#">Shop now <img src="./images/icon-arrow.svg" alt="icon-arrow"></a>
+      </article>
+    </section>
+    <section class="about">
+      <img src="./images/image-about-dark.jpg" alt="dark furniture">
+      <article>
+        <h4>About our furniture</h4>
+        <p>Our multifunctional collection blends design and function to suit your individual taste.
+          Make each room unique, or pick a cohesive theme that best express your interests and what
+          inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+          or anything in between. Product specialists are available to help you create your dream space.</p>
+      </article>
+      <img src="./images/image-about-light.jpg" alt="furniture with less opacity">
+    </section>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Justine Lowie Liban</a>.
+    </div>
+  </footer>
+</body>
+</html>
