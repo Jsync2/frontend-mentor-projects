@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Bookmark landing page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'">
+  <link rel="stylesheet" href="./src/output.css">
+  <script src="./js/script.js" defer></script>
+</head>
+<body class="font-rubik">
+  <header class="flex justify-between p-4 items-center md:p-12">
+    <svg id="logo" class="static z-20" xmlns="http://www.w3.org/2000/svg" width="148" height="25"><g fill="none" fill-rule="evenodd"><path id="name" d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z" fill="#242A45" fill-rule="nonzero"/><g><circle id="circle" fill="#5267DF" cx="12.5" cy="12.5" r="12.5"/><path id="tag" d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z" fill="#fff"/></g></g></svg>
+    <button type="button" id="hamburger" class="md:hidden">
+      <img src="./images/icon-hamburger.svg" alt="hamburger menu" class=" cursor-pointer">
+    </button>
+    <nav id="menu" class="hidden md:block">
+      <ul id="mobileMenu" class="flex flex-col tracking-widest uppercase px-8 font-semibold text-blue-950 gap-6 items-center [&>li:hover]:text-red-400 md:flex-row ">
+        <li class="border-grey-50 text-center py-4 md:border-none"><a href="#">Features</a></li>
+        <li class="border-grey-50 text-center py-4 md:border-none"><a href="#">Pricing</a></li>
+        <li class="border-grey-50 text-center py-4 md:border-none"><a href="#">Contact</a></li>
+        <button id="login" class="w-full border-2 border-red-400 text-white  px-6 py-2 cursor-pointer text-center rounded-md bg-red-400 hover:bg-white hover:text-red-400"><a href="#" class="text-xl">Login</a></button>
+        <div class="flex gap-4 mt-56 md:hidden">
+          <a href="#"><img src="./images/icon-facebook.svg" alt="facebook"></a>
+          <a href="#"><img src="./images/icon-twitter.svg" alt="twitter"></a>
+        </div>
+      </ul>
+    </nav>
+    <button class="static z-20 cursor-pointer hidden" type="button" id="close"><img src="./images/icon-close.svg" alt="close menu"></button>
+  </header>
+  <div id="overlay" class="fixed top-0 left-0 w-full h-full bg-blue-950 opacity-95 z-10 hidden md:hidden"></div>
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section id="hero" class="flex flex-col md:flex-row-reverse justify-center items-center w-full md:justify-between gap-10 md:px-16" aria-label="hero section">
+      <div class="relative flex-1">
+        <img src="./images/illustration-hero.svg" alt="illustration-hero">
+        <div class="absolute -z-1 right-0 top-20 w-72 h-44 bg-blue-600 rounded-l-full md:h-4/5 md:top-30 md:w-md"></div>
+      </div>
+      <div class="text-center p-4 flex flex-col md:text-left flex-1">
+        <h1 class="text-3xl font-semibold text-blue-950 text-[clamp(1.5rem,4vw,2.5rem)]">A Simple Bookmark Manager</h1>
+        <p class="text-grey-50 leading-normal font-medium p-7 md:pl-0 text-[clamp(0.9rem,2vw,1.2rem)]">A clean and simple interface to organize your favourite websites. Open a new 
+          browser tab and see your sites load instantly. Try it for free.</p>
+        <div class="flex justify-center items-center gap-4 md:justify-start">
+          <button class="bg-blue-600 text-white p-3 rounded-md shadow-sm font-semibold cursor-pointer border border-transparent
+          hover:bg-white hover:text-blue-600  hover:border-blue-600"><a href="#">Get it on Chrome</a></button>
+          <button class="text-gray-500 p-3 rounded-md shadow-md font-semibold cursor-pointer border-2 border-transparent
+           hover:border-blue-950"><a href="#">Get it on Firefox</a></button>
+        </div>
+      </div>
+    </section>
+    <section id="features" class="flex flex-col justify-center items-center w-full mt-20 gap-10 md:px-16">
+      <div class="text-center md:w-1/2">
+        <h2 class="text-2xl text-blue-950 font-semibold p-4 text-[clamp(1.5rem,4vw,2.2rem)]">Features</h2>
+        <p class="text-grey-50 leading-normal font-medium px-6 text-[clamp(0.9rem,2vw,1.2rem)]">Our aim is to make it quick and easy for you to access your favourite websites. 
+          Your bookmarks sync between your devices so you can access them on the go.</p>
+      </div>
+      <nav class="mb-12">
+        <ul class="text-center w-xs md:flex md:flex-row md:w-xl md:justify-center md:border-b md:border-grey-50">
+          <li class=" text-grey-50 p-4 cursor-pointer border-t relative tab md:border-0">
+            <a href="#" class="after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:border-b-4 after:border-red-400 after:w-1/2 text-blue-950 md:after:w-3/4">Simple Bookmarking</a>
+          </li>
+          <li class=" text-grey-50 p-4 cursor-pointer border-y relative tab md:border-0">
+            <a href="#">Speedy Searching</a>
+          </li>
+          <li class=" text-grey-50 p-4 cursor-pointer border-b relative tab md:border-0">
+            <a href="#">Easy Sharing</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="relative tab-image w-full md:flex md:gap-32">
+        <div class="md:flex-1">
+          <img src="./images/illustration-features-tab-1.svg" alt="illustration-tab1" class="px-4">
+          <div class="absolute -z-10 left-0 top-24 w-72 h-44 bg-blue-600 rounded-r-full md:h-4/5 md:top-30 md:w-md"></div>
+        </div>
+        <div class="text-center tab-content mt-24 md:flex-1 md:text-left md:mt-8" >
+          <h2 class="text-2xl text-blue-950 font-semibold p-4 md:pl-0 text-[clamp(1.5rem,4vw,2.2rem)]">Bookmark in one click</h2>
+          <p class="text-grey-50 leading-normal font-medium px-6 md:pl-0 text-[clamp(0.9rem,2vw,1.2rem)]">Organize your bookmarks however you like. Our simple drag-and-drop interface 
+            gives you complete control over how you manage your favourite sites.</p>
+          <button class="hidden bg-blue-600 text-white p-3 rounded-md shadow-sm font-semibold cursor-pointer md:mt-8 md:block"><a href="#">More Info</a></button>
+        </div>
+      </div>
+    </section>
+    <section id="download" class="flex flex-col justify-center items-center w-full mt-44 md:px-16">
+      <div class="text-center md:w-1/2">
+        <h2 class="text-2xl text-blue-950 font-semibold p-4 text-[clamp(1.5rem,4vw,2.2rem)]">Download the extension</h2>
+        <p class="text-grey-50 leading-normal font-medium px-6 text-[clamp(0.9rem,2vw,1.2rem)]">We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+          got a favourite you’d like us to prioritize.</p>
+      </div>
+      <div class="flex flex-row flex-wrap justify-center items-center gap-6">
+        <article class="flex flex-col justify-center items-center gap-6 py-8 shadow-md rounded-2xl">
+          <img src="./images/logo-chrome.svg" alt="chrome logo">
+          <h3 class="text-2xl text-blue-950 font-semibold">Add to Chrome</h3>
+          <p class="text-grey-50 leading-normal font-medium px-6">Minimum version 62</p>
+          <img src="./images/bg-dots.svg" alt="bg-dots">
+          <button class="bg-blue-600 text-white p-3 border border-transparent rounded-md shadow-sm font-semibold cursor-pointer hover:bg-white hover:text-blue-600 hover:border-blue-600">Add & Install Extension</button>
+        </article>
+        <article class="flex flex-col justify-center items-center gap-6 py-8 shadow-md rounded-2xl md:mt-20">
+          <img src="./images/logo-firefox.svg" alt="firefox logo">
+          <h3 class="text-2xl text-blue-950 font-semibold">Add to Firefox</h3>
+          <p class="text-grey-50 leading-normal font-medium px-6">Minimum version 55</p>
+          <img src="./images/bg-dots.svg" alt="bg-dots">
+          <button class="bg-blue-600 text-white p-3 border border-transparent rounded-md shadow-sm font-semibold cursor-pointer hover:bg-white hover:text-blue-600 hover:border-blue-600">Add & Install Extension</button>
+        </article>
+        <article class="flex flex-col justify-center items-center gap-6 py-8 shadow-md rounded-2xl md:mt-40">
+          <img src="./images/logo-opera.svg" alt="opera logo">
+          <h3 class="text-2xl text-blue-950 font-semibold">Add to Opera</h3>
+          <p class="text-grey-50 leading-normal font-medium px-6">Minimum version 46</p>
+          <img src="./images/bg-dots.svg" alt="bg-dots">
+          <button class="bg-blue-600 text-white p-3 border border-transparent rounded-md shadow-sm font-semibold cursor-pointer hover:bg-white hover:text-blue-600 hover:border-blue-600">Add & Install Extension</button>
+        </article>
+      </div>
+    </section>
+    <section id="faq" class="mt-20 flex flex-col md:px-16">
+      <div class="text-center mb-12 md:w-1/2 self-center">
+        <h2 class="text-2xl text-blue-950 font-semibold p-4 text-[clamp(1.5rem,4vw,2.2rem)]">Frequently Asked Questions</h2>
+        <p class="text-grey-50 leading-normal font-medium px-6 text-[clamp(0.9rem,2vw,1.2rem)]">Here are some of our FAQs. If you have any other questions you’d like 
+          answered please feel free to email us.</p>
+      </div>
+      <div class="flex flex-col gap-4 items-center">
+        <div class="px-4 w-full">
+          <div class="flex justify-between items-center mb-4">
+            <h4 class="text-md text-blue-950 font-semibold [clamp(1.5rem,4vw,2.2rem)]">What is a Bookmark?</h4>
+            <button class="cursor-pointer faq-btn"><img src="./images/icon-arrow.svg" alt="arrow expand"></button> 
+          </div>
+          <div class="faq-answer">
+            <p class="text-grey-50 leading-normal  text-sm  max-h-0 overflow-hidden text-[clamp(0.9rem,2vw,1rem)]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+              justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+          </div>
+        </div>
+        <hr class="my-4 border-t-1 border-grey-50 w-full">
+        <div class="px-4 w-full">
+          <div class="flex justify-between items-center mb-4">
+            <h4 class="text-md text-blue-950 font-semibold [clamp(1.5rem,4vw,2.2rem)]">How can I request a new browser?</h4>
+            <button class="cursor-pointer faq-btn"><img src="./images/icon-arrow.svg" alt="arrow expand"></button> 
+          </div>
+          <div class="faq-answer">
+            <p class="text-grey-50 leading-normal text-sm max-h-0 overflow-hidden text-[clamp(0.9rem,2vw,1rem)]">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+              Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+              ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+          </div>
+        </div>
+        <hr class="my-4 border-t-1 border-grey-50 w-full">
+        <div class="px-4 w-full">
+          <div class="flex justify-between items-center mb-4">
+            <h4 class="text-md text-blue-950 font-semibold [clamp(1.5rem,4vw,2.2rem)]">Is there a mobile app?</h4>
+            <button class="cursor-pointer faq-btn"><img src="./images/icon-arrow.svg" alt="arrow expand"></button> 
+          </div>
+          <div class="faq-answer">
+            <p class="text-grey-50 leading-normal text-sm max-h-0 overflow-hidden text-[clamp(0.9rem,2vw,1rem)]">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+              urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+              sollicitudin ex et ultricies bibendum.</p>
+          </div>
+        </div>
+        <hr class="my-4 border-t-1 border-grey-50 w-full">
+        <div class="px-4 w-full">
+          <div class="flex justify-between items-center mb-4">
+            <h4 class="text-md text-blue-950 font-semibold [clamp(1.5rem,4vw,2.2rem)]">What about other Chromium browsers?</h4>
+            <button class="cursor-pointer faq-btn"><img src="./images/icon-arrow.svg" alt="arrow expand"></button> 
+          </div>
+          <div class="faq-answer">
+            <p class="text-grey-50 leading-normal text-sm max-h-0 overflow-hidden text-[clamp(0.9rem,2vw,1rem)]">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+              vitae neque eget nisl gravida pellentesque non ut velit.</p>
+          </div>
+        </div>
+        <hr class="my-4 border-t-1 border-grey-50 w-full">
+        <button class="bg-blue-600 text-white py-3 px-4 rounded-md shadow-sm font-semibold cursor-pointer w-28">More Info</button>
+      </div>
+    </section>
+    <section id="contact" class="mt-20 flex flex-col justify-center items-center gap-2 py-14 px-8 bg-blue-600">
+      <p class="text-white uppercase font-semibold text-sm tracking-widest">35,000+ already joined</p>
+      <h3 class="font-semibold text-2xl text-white text-center">Stay up-to-date with what we’re doing</h3>
+      <form id="contact-form" class="flex flex-col items-center gap-4 w-full mt-8 md:flex-row justify-center">
+        <label for="email">
+          <input autocomplete="on" id="email" type="email" placeholder="Enter your email address" class="py-3 px-4 rounded-md shadow-sm font-semibold w-72 bg-white">
+        </label>
+        <button type="submit" class="bg-red-400 text-white py-3 px-4 rounded-md shadow-sm font-semibold cursor-pointer w-72 md:w-32">Contact Us</button>
+      </form>
+    </section>
+  </main>
+  <footer class="flex flex-col justify-center items-center pt-12 bg-blue-950 text-center text-white md:pt-4">
+    <div class="flex flex-col w-full gap-6 px-16 justify-between items-center md:flex-row md:gap-0">
+      <div class="flex flex-col gap-2 items-center justify-center md:flex-row md:gap-16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="148" height="25"><g fill="none" fill-rule="evenodd"><path d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z" fill="#FFF" fill-rule="nonzero"/><g><circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5"/><path d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z" fill="#FFF"/></g></g></svg>
+        <nav class="mt-6 md:m-0">
+          <ul class="flex flex-col md:flex-row gap-8 text-lg">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+      <ul class="flex gap-6">
+        <li><a href="#"><img src="./images/icon-facebook.svg" alt="facebook"></a></li>
+        <li><a href="#"><img src="./images/icon-twitter.svg" alt="twitter"></a></li>
+      </ul>
+    </div>
+  </div>
+  <p class=" p-4 text-xs">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Justine Lowie D. Liban</a>.
+  </p>
+  </footer>
+</body>
+</html>
