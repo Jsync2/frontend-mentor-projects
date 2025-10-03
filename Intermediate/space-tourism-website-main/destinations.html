@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./style/output.css">
+  <script type="module" src="./js/main.js" defer></script>
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body class="bg-[url('../assets/destination/background-destination-mobile.jpg')] md:bg-[url('../assets/destination/background-destination-tablet.jpg')] lg:bg-[url('../assets/destination/background-destination-desktop.jpg')] h-full bg-cover bg-center bg-no-repeat overflow-x-hidden lg:h-dvh">
+  <header class="flex justify-between mb-16 lg:mt-4 lg:mb-0 lg:ml-8 relative" id="header"></header>
+  <h1 class="my-8 text-center text-preset-m6 text-white font-barlow-condensed md:text-left md:self-start md:ml-8 lg:text-[1.75rem] lg:ml-24"><span class="opacity-25 mr-3 lg:font-bold">01</span> PICK YOUR DESTINATION</h1>
+  <main class="text-white text-center flex flex-col justify-center items-center gap-12 pb-8 lg:flex-row lg:p-32 lg:pb-20 lg:gap-36 lg:px-48">
+    <section class="flex flex-col items-center justify-center gap-6 w-full">
+      <img src="" alt="" id="destination-img" class="w-36 md:w-64 lg:w-md">
+    </section>
+    <section class="flex flex-col items-center gap-8 px-8 md:px-20 lg:items-start lg:px-0">
+      <nav class="destination-nav">
+        <ul class="flex gap-6 text-preset-m8 md:text-preset-8 text-blue-300 text-base [&>li]:border-b-2 [&>li]:border-transparent [&>li>button]:cursor-pointer [&>li>button]:uppercase
+          [&>li]:pb-2 [&>li]:hover:border-white ">
+          <li><button>Moon</button></li>
+          <li><button>Mars</button></li>
+          <li><button>Europa</button></li>
+          <li><button>Titan</button></li>
+        </ul>
+      </nav>
+      <h2 class="text-preset-m2 uppercase md:text-[5rem]" id="destination-name"></h2>
+      <p class="text-preset-m9 text-blue-300 md:text-base lg:text-start" id="description">Description</p>
+      <hr class="w-full">
+      <div class="flex flex-col gap-8 uppercase md:flex-row md:w-full md:justify-center md:gap-28 lg:justify-normal">
+        <div class="flex flex-col gap-6">
+          <p class="text-preset-7 text-blue-300">AVG. DISTANCE</p>
+          <span id="distance" class="text-preset-6">384,488 KM</span>
+        </div>
+        <div class="flex flex-col gap-6">
+          <p class="text-preset-7 text-blue-300">EST. TRAVEL TIME</p>
+          <span id="travel" class="text-preset-6">3 DAYS</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
