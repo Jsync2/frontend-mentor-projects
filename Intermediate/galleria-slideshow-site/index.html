@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Frontend Mentor | Galleria slideshow site</title>
+  <script type="module" src="./src/main.js" defer></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+</head>
+<body class="lg:p-6 flex flex-col">
+  <header class="flex items-center justify-between p-6 border-b-2 border-b-gray-150">
+    <img src="/assets/shared/logo.svg" alt="logo" class="w-28">
+    <button class="text-gray-400 text-[0.6rem]/tight font-bold tracking-widest cursor-pointer" id="slidshowToggle">START SLIDESHOW</button>
+  </header>
+  <main class="w-full p-6 lg:pt-16 lg:mb-40" id="gallery-container">
+  </main>
+</body>
+</html>
