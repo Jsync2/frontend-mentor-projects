@@ -1,0 +1,4 @@
+[build]
+  base = "Intermediate/galleria-slideshow-site"
+  publish = "Intermediate/galleria-slideshow-site/dist"
+  command = "npm run build"
